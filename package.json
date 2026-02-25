@@ -1,0 +1,19 @@
+{
+  "name": "prospector-skill",
+  "version": "1.0.0",
+  "description": "Skill Claude Code pour gérer la prospection LinkedIn via Airtable Prospector",
+  "bin": {
+    "prospector-skill": "bin/install.js"
+  },
+  "files": [
+    "bin/",
+    ".claude/"
+  ],
+  "keywords": ["claude-code", "skill", "airtable", "linkedin", "prospector"],
+  "author": "philcollins2171",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philcollins2171/prospector-skill"
+  }
+}
