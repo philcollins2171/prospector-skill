@@ -4,10 +4,13 @@ set +x +v
 REPO="https://raw.githubusercontent.com/philcollins2171/prospector-skill/main"
 DEST="$HOME/.claude/skills/prospector"
 
-mkdir -p "$DEST"
+if ! mkdir -p "$DEST"; then
+  echo "❌ Impossible de créer $DEST (droits insuffisants ?)"
+  exit 1
+fi
 
-if ! curl -fsSL "$REPO/.claude/skills/prospector/SKILL.md" -o "$DEST/SKILL.md" 2>/dev/null; then
-  echo "❌ Échec du téléchargement. Vérifier la connexion internet."
+if ! curl -fsSL "$REPO/.claude/skills/prospector/SKILL.md" -o "$DEST/SKILL.md"; then
+  echo "❌ Échec du téléchargement depuis GitHub."
   exit 1
 fi
 
