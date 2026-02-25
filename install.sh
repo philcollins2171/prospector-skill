@@ -1,11 +1,15 @@
 #!/bin/bash
 # Installe le skill Prospector dans le projet courant
 
+REPO="https://raw.githubusercontent.com/philcollins2171/prospector-skill/main"
 DEST=".claude/skills/prospector"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 mkdir -p "$DEST"
-cp "$SCRIPT_DIR/.claude/skills/prospector/SKILL.md" "$DEST/SKILL.md"
+
+if ! curl -fsSL "$REPO/.claude/skills/prospector/SKILL.md" -o "$DEST/SKILL.md"; then
+  echo "❌ Échec du téléchargement. Vérifier la connexion internet."
+  exit 1
+fi
 
 # Ajoute les fichiers sensibles au .gitignore
 for entry in ".mcp.json" ".prospector.json"; do
