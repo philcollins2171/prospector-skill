@@ -704,7 +704,7 @@ Utiliser `AskUserQuestion` pour poser les questions suivantes (en plusieurs tour
 
 ### Etape 3 : Creer l'Offre dans Airtable
 
-Utiliser `mcp__airtable__create_record` sur la table `tblPsGgjuFm9UISU4` (base `appP5ea41dgQlxgcA`) avec les champs collectes.
+Utiliser `mcp__airtable__create_record` sur la table `tblPsGgjuFm9UISU4` (base : `baseId` lu depuis `.prospector.json`) avec les champs collectes.
 
 Afficher un resume du record cree.
 
