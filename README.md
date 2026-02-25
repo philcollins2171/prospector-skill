@@ -7,13 +7,7 @@ Skill Claude Code pour gérer votre prospection LinkedIn via Airtable Prospector
 ### En 1 commande
 
 ```bash
-git clone https://github.com/philcollins2171/prospector-skill /tmp/prospector-skill && bash /tmp/prospector-skill/install.sh
-```
-
-Ou via curl :
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/philcollins2171/prospector-skill/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/philcollins2171/prospector-skill/main/install.sh -o /tmp/prospector-install.sh && bash /tmp/prospector-install.sh && rm /tmp/prospector-install.sh
 ```
 
 ### Manuellement
